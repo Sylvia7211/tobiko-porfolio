@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leteipa Tobiko | Professional Experience</title>
+    <meta name="description" content="Professional Experience - Leteipa Tobiko, Actuary & Data Scientist based in Nairobi, Kenya.">
+    <script>
+        // Predefine Tailwind config and inject external assets only when online
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        primary: '#0f172a',
+                        accent: '#3b82f6',
+                        secondary: '#64748b',
+                        slate: { 50: '#f8fafc', 100: '#f1f5f9', 200: '#e2e8f0', 300: '#cbd5e1', 400: '#94a3b8', 500: '#64748b', 600: '#475569', 700: '#334155', 800: '#1e293b', 900: '#0f172a' },
+                        blue: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 900: '#1e3a8a' }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'slide-in-left': 'slideInLeft 0.6s ease-out forwards',
+                        'slide-in-right': 'slideInRight 0.6s ease-out forwards',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite'
+                    },
+                    boxShadow: {
+                        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                        'card-hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                        'timeline': '0 0 0 6px white, 0 0 0 8px #e2e8f0'
+                    }
+                }
+            }
+        };
+        (function(){
+            if (navigator.onLine) {
+                var s = document.createElement('script'); s.src = 'https://cdn.tailwindcss.com'; document.head.appendChild(s);
+                var gf = document.createElement('link'); gf.rel = 'stylesheet'; gf.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'; document.head.appendChild(gf);
+                var fa = document.createElement('link'); fa.rel = 'stylesheet'; fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css'; document.head.appendChild(fa);
+            }
+        })();
+    </script>
+    <style>
+        * { font-feature-settings: 'kern' 1; }
+        h1, h2, h3, h4 { letter-spacing: -0.025em; }
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass-effect {
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        .timeline-line {
+            background: linear-gradient(180deg, #3b82f6 0%, #cbd5e1 100%);
+        }
+        .skill-tag {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .experience-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .experience-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+        .experience-image {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .experience-card:hover .experience-image {
+            transform: scale(1.08);
+        }
+        .timeline-dot {
+            transition: all 0.3s ease;
+        }
+        .timeline-dot:hover {
+            transform: scale(1.3);
+        }
+        .achievement-item {
+            transition: all 0.3s ease;
+        }
+        .achievement-item:hover {
+            transform: translateX(4px);
+        }
+        
+        /* Hero background with image overlay - different from skills page */
+        .hero-bg {
+            background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 58, 138, 0.9) 50%, rgba(59, 130, 246, 0.9) 100%), url('../assets/images/projects/bi-project.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        /* Floating animation for hero section */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        
+        /* Blob animations */
+        .blob {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            animation: blob 8s ease-in-out infinite;
+        }
+        @keyframes blob {
+            0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+        }
+        .blob-delay-2 {
+            animation-delay: 2s;
+        }
+        
+        /* Slide up animation */
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50 text-slate-800 antialiased min-h-screen">
+
+    <nav class="fixed w-full z-50 glass-effect border-b border-slate-200/60 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-primary hover:opacity-80 transition-opacity">
+                        LT<span class="gradient-text">.</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-4 sm:space-x-8">
+                    <a href="index.html" class="nav-link text-slate-600 hover:text-accent font-medium transition-all duration-300 hover:scale-105 text-sm sm:text-base">Home</a>
+                    <a href="about.html" class="nav-link text-slate-600 hover:text-accent font-medium transition-all duration-300 hover:scale-105 text-sm sm:text-base">About</a>
+                    <a href="skills.html" class="nav-link text-slate-600 hover:text-accent font-medium transition-all duration-300 hover:scale-105 text-sm sm:text-base">Skills</a>
+                    <a href="experience.html" class="nav-link text-accent font-semibold border-b-2 border-accent pb-1">Experience</a>
+                    <a href="projects.html" class="nav-link text-slate-600 hover:text-accent font-medium transition-all duration-300 hover:scale-105 text-sm sm:text-base">Projects</a>
+                    <a href="certifications.html" class="nav-link text-slate-600 hover:text-accent font-medium transition-all duration-300 hover:scale-105 text-sm sm:text-base">Certifications</a>
+                    <a href="contact.html" class="px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-accent to-blue-600 text-white rounded-xl hover:from-blue-600 hover:to-accent transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-medium text-sm sm:text-base">Contact Me</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-accent focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden glass-effect border-t border-slate-200/60">
+            <a href="index.html" class="block py-3 px-4 text-slate-600 hover:bg-slate-100/80 transition">Home</a>
+            <a href="about.html" class="block py-3 px-4 text-slate-600 hover:bg-slate-100/80 transition">About</a>
+            <a href="skills.html" class="block py-3 px-4 text-slate-600 hover:bg-slate-100/80 transition">Skills</a>
+            <a href="experience.html" class="block py-3 px-4 text-accent font-semibold bg-blue-50/50">Experience</a>
+            <a href="projects.html" class="block py-3 px-4 text-slate-600 hover:bg-slate-100/80 transition">Projects</a>
+            <a href="certifications.html" class="block py-3 px-4 text-slate-600 hover:bg-slate-100/80 transition">Certifications</a>
+            <a href="contact.html" class="block py-3 px-4 text-accent font-semibold bg-blue-50/50">Contact Me</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Animated Background -->
+    <section class="relative h-96 md:h-[500px] flex items-center justify-center overflow-hidden hero-bg">
+        
+        <!-- Animated Blobs -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="blob absolute top-20 left-20 w-72 h-72 bg-blue-300 opacity-20 animate-float"></div>
+            <div class="blob absolute bottom-20 right-20 w-96 h-96 bg-orange-300 opacity-20 animate-float blob-delay-2"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <div class="animate-slide-up">
+                <div class="mb-8">
+                    <span class="inline-block px-4 py-2 text-sm font-semibold text-white bg-white/10 backdrop-blur-md rounded-full mb-6 border border-white/20">
+                        PROFESSIONAL JOURNEY
+                    </span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+                    Career <span class="text-white">Experience</span>
+                </h1>
+                <p class="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">
+                    A comprehensive timeline of my professional growth, key achievements, and career milestones in <span class="text-white font-semibold">data science</span> and <span class="text-white font-semibold">artificial intelligence</span>.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+                    <div class="px-4 sm:px-6 py-2 sm:py-3 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+                        <div class="text-2xl sm:text-3xl font-bold text-white">3+</div>
+                        <div class="text-xs sm:text-sm text-white/80">Years Experience</div>
+                    </div>
+                    <div class="px-4 sm:px-6 py-2 sm:py-3 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+                        <div class="text-2xl sm:text-3xl font-bold text-white">15+</div>
+                        <div class="text-xs sm:text-sm text-white/80">Projects Delivered</div>
+                    </div>
+                    <div class="px-4 sm:px-6 py-2 sm:py-3 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+                        <div class="text-2xl sm:text-3xl font-bold text-white">98%</div>
+                        <div class="text-xs sm:text-sm text-white/80">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 bg-gradient-to-b from-white via-slate-50/50 to-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <span class="inline-block px-5 py-2 text-sm font-semibold text-accent bg-blue-50 rounded-full mb-6 border border-blue-100">CAREER TIMELINE</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6 leading-tight">Professional <span class="gradient-text">Experience</span></h2>
+                <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                    A chronological journey through my professional growth, showcasing key roles, significant achievements, and the skills I've developed along the way.
+                </p>
+            </div>
+
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="absolute left-4 md:left-1/2 h-full w-1 timeline-line -translate-x-1/2"></div>
+
+                <!-- Timeline Item 1 -->
+                <div class="mb-20 relative z-10 timeline-item animate-fade-in-up">
+                    <div class="md:flex justify-center items-start">
+                        <div class="md:w-5/12 md:pr-12 md:text-right">
+                            <!-- Mobile timeline icon -->
+                            <div class="md:hidden flex justify-center mb-6">
+                                <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-blue-400 rounded-2xl shadow-xl flex items-center justify-center">
+                                    <i class="fas fa-robot text-4xl text-white"></i>
+                                </div>
+                                <div class="mt-3 text-center">
+                                    <div class="text-sm font-semibold text-blue-600">Mindrift</div>
+                                    <div class="text-xs text-slate-500">Remote</div>
+                                </div>
+                            </div>
+                            <!-- Desktop content -->
+                            <div class="hidden md:block">
+                                <div class="inline-block p-3 bg-gradient-to-r from-blue-500 to-blue-400 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 mb-4">
+                                    <div class="bg-white p-3 rounded-xl">
+                                        <div class="w-24 h-24 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl flex items-center justify-center">
+                                            <i class="fas fa-robot text-5xl text-blue-600"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="space-y-3">
+                                    <div class="bg-blue-50 rounded-xl p-4 border border-blue-100">
+                                        <div class="flex items-center gap-3 mb-2">
+                                            <i class="fas fa-building text-blue-500"></i>
+                                            <span class="font-semibold text-blue-700">Mindrift</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <i class="fas fa-globe text-blue-400"></i>
+                                            <span class="text-sm text-slate-600">Remote Work</span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm">
+                                        <div class="flex items-center gap-3 mb-2">
+                                            <i class="fas fa-calendar text-blue-500"></i>
+                                            <span class="font-semibold text-slate-700">Duration</span>
+                                        </div>
+                                        <div class="text-sm text-slate-600">2025 - Present</div>
+                                    </div>
+                                    <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-4 border border-blue-200">
+                                        <div class="flex items-center gap-3 mb-2">
+                                            <i class="fas fa-briefcase text-blue-600"></i>
+                                            <span class="font-semibold text-blue-700">Role Type</span>
+                                        </div>
+                                        <div class="text-sm text-blue-600">Contract / Remote</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden md:flex items-center justify-center w-24">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-blue-400 border-4 border-white shadow-xl timeline-dot cursor-pointer"></div>
+                        </div>
+                        <div class="mt-8 md:mt-0 md:w-5/12 md:pl-12">
+                            <div class="bg-white rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-500 overflow-hidden experience-card border border-slate-200/50">
+                                <div class="relative overflow-hidden h-56">
+                                    <img src="../assets/images/experience/ai-trainer.jpg" alt="AI Technology" class="w-full h-full object-cover experience-image">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                    <div class="absolute top-4 right-4">
+                                        <span class="px-4 py-2 bg-blue-600 text-white text-sm font-bold rounded-full shadow-lg">2025</span>
+                                    </div>
+                                </div>
+                                <div class="p-8">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div>
+                                            <h3 class="text-2xl font-bold text-primary mb-2">AI Trainer / Visual Data Specialist</h3>
+                                            <div class="flex items-center gap-2 mb-3">
+                                                <i class="fas fa-building text-blue-500"></i>
+                                                <p class="text-accent font-semibold text-lg">Mindrift (Remote)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-slate-600 mb-6 text-lg leading-relaxed">Specialized in high-precision data annotation for Computer Vision models, ensuring top-tier training data quality for advanced AI systems.</p>
+                                    <div class="mb-6">
+                                        <h4 class="text-lg font-bold text-primary mb-4 flex items-center gap-2">
+                                            <i class="fas fa-trophy text-yellow-500"></i>
+                                            Key Achievements
+                                        </h4>
+                                        <div class="space-y-3">
+                                            <div class="achievement-item flex items-start gap-3 p-3 rounded-lg bg-blue-50/30 hover:bg-blue-50/50 transition">
+                                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0 text-lg"></i>
+                                                <span class="text-slate-700 leading-relaxed">Maintained <strong class="text-blue-600">98%+ accuracy</strong> in annotating complex visual datasets, significantly improving model performance</span>
+                                            </div>
+                                            <div class="achievement-item flex items-start gap-3 p-3 rounded-lg bg-blue-50/30 hover:bg-blue-50/50 transition">
+                                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0 text-lg"></i>
+                                                <span class="text-slate-700 leading-relaxed">Collaborated with engineering teams to refine annotation guidelines, reducing ambiguity by <strong class="text-blue-600">40%</strong></span>
+                                            </div>
+                                            <div class="achievement-item flex items-start gap-3 p-3 rounded-lg bg-blue-50/30 hover:bg-blue-50/50 transition">
+                                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0 text-lg"></i>
+                                                <span class="text-slate-700 leading-relaxed">Mentored junior annotators, improving team accuracy by <strong class="text-blue-600">15%</strong> through knowledge sharing</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-wrap gap-3 mt-6">
+                                        <span class="skill-tag px-4 py-2 bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 text-sm font-semibold rounded-full border border-blue-200">Computer Vision</span>
+                                        <span class="skill-tag px-4 py-2 bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 text-sm font-semibold rounded-full border border-blue-200">Data Annotation</span>
+                                        <span class="skill-tag px-4 py-2 bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 text-sm font-semibold rounded-full border border-blue-200">Quality Assurance</span>
+                                        <span class="skill-tag px-4 py-2 bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 text-sm font-semibold rounded-full border border-blue-200">Team Leadership</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="mb-20 relative z-10 timeline-item animate-fade-in-up">
+                    <div class="md:flex justify-center items-start">
+                        <div class="md:w-5/12 md:pr-12 md:text-right order-2">
+                            <!-- Mobile timeline icon -->
+                            <div class="md:hidden flex justify-center mb-6">
+                                <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-purple-400 rounded-2xl shadow-xl flex items-center justify-center">
+                                    <i class="fas fa-chart-line text-4xl text-white"></i>
+                                </div>
+                                <div class="mt-3 text-center">
+                                    <div class="text-sm font-semibold text-purple-600">Olosida Company</div>
+                                    <div class="text-xs text-slate-500">Nairobi, Kenya</div>
+                                </div>
+                            </div>
+                            <!-- Desktop content -->
+                            <div class="hidden md:block">
+                                <div class="inline-block p-3 bg-gradient-to-r from-purple-500 to-purple-400 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 mb-4">
+                                    <div class="bg-white p-3 rounded-xl">
+                                        <div class="w-24 h-24 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl flex items-center justify-center">
+                                            <i class="fas fa-chart-line text-5xl text-purple-600"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="space-y-3">
+                                    <div class="bg-purple-50 rounded-xl p-4 border border-purple-100">
+                                        <div class="flex items-center gap-3 mb-2">
+                                            <i class="fas fa-building text-purple-500"></i>
+                                            <span class="font-semibold text-purple-700">Olosida Company</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <i class="fas fa-map-marker-alt text-purple-400"></i>
+                                            <span class="text-sm text-slate-600">Nairobi, Kenya</span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm">
+                                        <div class="flex items-center gap-3 mb-2">
+                                            <i class="fas fa-calendar text-purple-500"></i>
+                                            <span class="font-semibold text-slate-700">Duration</span>
+                                        </div>
+                                        <div class="text-sm text-slate-600">2024 - 2025</div>
+                                    </div>
+                                    <div class="bg-gradient-to-r from-purple-50 to-purple-100 rounded-xl p-4 border border-purple-200">
+                                        <div class="flex items-center gap-3 mb-2">
+                                            <i class="fas fa-briefcase text-purple-600"></i>
+                                            <span class="font-semibold text-purple-700">Role Type</span>
+                                        </div>
+                                        <div class="text-sm text-purple-600">Full-time / On-site</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden md:flex items-center justify-center w-24 order-1">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-purple-400 border-4 border-white shadow-xl timeline-dot cursor-pointer"></div>
+                        </div>
+                        <div class="mt-8 md:mt-0 md:w-5/12 md:pl-12 order-3">
+                            <div class="bg-white rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-500 overflow-hidden experience-card border border-slate-200/50">
+                                <div class="relative overflow-hidden h-56">
+                                    <img src="../assets/images/experience/data-scientist.jpg" alt="Data Science Analytics" class="w-full h-full object-cover experience-image">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                    <div class="absolute top-4 right-4">
+                                        <span class="px-4 py-2 bg-purple-600 text-white text-sm font-bold rounded-full shadow-lg">2024 - 2025</span>
+                                    </div>
+                                </div>
+                                <div class="p-8">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div>
+                                            <h3 class="text-2xl font-bold text-primary mb-2">Data Scientist / Analyst</h3>
+                                            <div class="flex items-center gap-2 mb-3">
+                                                <i class="fas fa-map-marker-alt text-purple-500"></i>
+                                                <p class="text-accent font-semibold text-lg">Olosida Company (Nairobi)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-slate-600 mb-6 text-lg leading-relaxed">Led data analysis initiatives for livestock production metrics, delivering actionable insights to optimize operations and drive efficiency.</p>
+                                    <div class="mb-6">
+                                        <h4 class="text-lg font-bold text-primary mb-4 flex items-center gap-2">
+                                            <i class="fas fa-trophy text-yellow-500"></i>
+                                            Key Achievements
+                                        </h4>
+                                        <div class="space-y-3">
+                                            <div class="achievement-item flex items-start gap-3 p-3 rounded-lg bg-purple-50/30 hover:bg-purple-50/50 transition">
+                                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0 text-lg"></i>
+                                                <span class="text-slate-700 leading-relaxed">Designed and implemented automated SQL/Power BI dashboards that reduced reporting time by <strong class="text-purple-600">60%</strong></span>
+                                            </div>
+                                            <div class="achievement-item flex items-start gap-3 p-3 rounded-lg bg-purple-50/30 hover:bg-purple-50/50 transition">
+                                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0 text-lg"></i>
+                                                <span class="text-slate-700 leading-relaxed">Conducted exploratory data analysis (EDA) that identified key production bottlenecks, leading to a <strong class="text-purple-600">25% increase</strong> in efficiency</span>
+                                            </div>
+                                            <div class="achievement-item flex items-start gap-3 p-3 rounded-lg bg-purple-50/30 hover:bg-purple-50/50 transition">
+                                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0 text-lg"></i>
+                                                <span class="text-slate-700 leading-relaxed">Developed predictive models for livestock health monitoring with <strong class="text-purple-600">92% accuracy</strong></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-wrap gap-3 mt-6">
+                                        <span class="skill-tag px-4 py-2 bg-gradient-to-r from-purple-50 to-purple-100 text-purple-700 text-sm font-semibold rounded-full border border-purple-200">Python</span>
+                                        <span class="skill-tag px-4 py-2 bg-gradient-to-r from-purple-50 to-purple-100 text-purple-700 text-sm font-semibold rounded-full border border-purple-200">SQL</span>
+                                        <span class="skill-tag px-4 py-2 bg-gradient-to-r from-purple-50 to-purple-100 text-purple-700 text-sm font-semibold rounded-full border border-purple-200">Power BI</span>
+                                        <span class="skill-tag px-4 py-2 bg-gradient-to-r from-purple-50 to-purple-100 text-purple-700 text-sm font-semibold rounded-full border border-purple-200">Data Visualization</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative z-10 timeline-item animate-fade-in-up">
+                    <div class="md:flex justify-center items-start">
+                        <div class="md:w-5/12 md:pr-12 md:text-right">
+                            <!-- Mobile timeline icon -->
+                            <div class="md:hidden flex justify-center mb-6">
+                                <div class="w-20 h-20 bg-gradient-to-r from-orange-500 to-orange-400 rounded-2xl shadow-xl flex items-center justify-center">
+                                    <i class="fas fa-hand-holding-usd text-4xl text-white"></i>
+                                </div>
+                                <div class="mt-3 text-center">
+                                    <div class="text-sm font-semibold text-orange-600">Platinum Credit Ltd</div>
+                                    <div class="text-xs text-slate-500">Kenya</div>
+                                </div>
+                            </div>
+                            <!-- Desktop content -->
+                            <div class="hidden md:block">
+                                <div class="inline-block p-3 bg-gradient-to-r from-orange-500 to-orange-400 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 mb-4">
+                                    <div class="bg-white p-3 rounded-xl">
+                                        <div class="w-24 h-24 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl flex items-center justify-center">
+                                            <i class="fas fa-hand-holding-usd text-5xl text-orange-600"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="space-y-3">
+                                    <div class="bg-orange-50 rounded-xl p-4 border border-orange-100">
+                                        <div class="flex items-center gap-3 mb-2">
+                                            <i class="fas fa-building text-orange-500"></i>
+                                            <span class="font-semibold text-orange-700">Platinum Credit Ltd</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <i class="fas fa-map-marker-alt text-orange-400"></i>
+                                            <span class="text-sm text-slate-600">Kenya</span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm">
+                                        <div class="flex items-center gap-3 mb-2">
+                                            <i class="fas fa-calendar text-orange-500"></i>
+                                            <span class="font-semibold text-slate-700">Duration</span>
+                                        </div>
+                                        <div class="text-sm text-slate-600">Sep - Dec 2024</div>
+                                    </div>
+                                    <div class="bg-gradient-to-r from-orange-50 to-orange-100 rounded-xl p-4 border border-orange-200">
+                                        <div class="flex items-center gap-3 mb-2">
+                                            <i class="fas fa-briefcase text-orange-600"></i>
+                                            <span class="font-semibold text-orange-700">Role Type</span>
+                                        </div>
+                                        <div class="text-sm text-orange-600">Contract / Hybrid</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden md:flex items-center justify-center w-24">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-orange-500 to-orange-400 border-4 border-white shadow-xl timeline-dot cursor-pointer"></div>
+                        </div>
+                        <div class="mt-8 md:mt-0 md:w-5/12 md:pl-12">
+                            <div class="bg-white rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-500 overflow-hidden experience-card border border-slate-200/50">
+                                <div class="relative overflow-hidden h-56">
+                                    <img src="../assets/images/projects/bi-project.jpg" alt="Financial Risk Analysis" class="w-full h-full object-cover experience-image">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                    <div class="absolute top-4 right-4">
+                                        <span class="px-4 py-2 bg-orange-600 text-white text-sm font-bold rounded-full shadow-lg">Sep - Dec 2024</span>
+                                    </div>
+                                </div>
+                                <div class="p-8">
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div>
+                                            <h3 class="text-2xl font-bold text-primary mb-2">Sales Agent & Financial Risk Analyst</h3>
+                                            <div class="flex items-center gap-2 mb-3">
+                                                <i class="fas fa-building text-orange-500"></i>
+                                                <p class="text-accent font-semibold text-lg">Platinum Credit Ltd</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-slate-600 mb-6 text-lg leading-relaxed">Conducted comprehensive credit risk assessments and financial analysis to support lending decisions and minimize bad debt exposure.</p>
+                                    <div class="mb-6">
+                                        <h4 class="text-lg font-bold text-primary mb-4 flex items-center gap-2">
+                                            <i class="fas fa-trophy text-yellow-500"></i>
+                                            Key Achievements
+                                        </h4>
+                                        <div class="space-y-3">
+                                            <div class="achievement-item flex items-start gap-3 p-3 rounded-lg bg-orange-50/30 hover:bg-orange-50/50 transition">
+                                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0 text-lg"></i>
+                                                <span class="text-slate-700 leading-relaxed">Reduced bad debt ratio by <strong class="text-orange-600">18%</strong> through improved risk assessment protocols</span>
+                                            </div>
+                                            <div class="achievement-item flex items-start gap-3 p-3 rounded-lg bg-orange-50/30 hover:bg-orange-50/50 transition">
+                                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0 text-lg"></i>
+                                                <span class="text-slate-700 leading-relaxed">Developed a credit scoring model that improved loan approval accuracy by <strong class="text-orange-600">22%</strong></span>
+                                            </div>
+                                            <div class="achievement-item flex items-start gap-3 p-3 rounded-lg bg-orange-50/30 hover:bg-orange-50/50 transition">
+                                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0 text-lg"></i>
+                                                <span class="text-slate-700 leading-relaxed">Maintained a <strong class="text-orange-600">95%+ accuracy</strong> rate in client financial assessments</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-wrap gap-3 mt-6">
+                                        <span class="skill-tag px-4 py-2 bg-gradient-to-r from-orange-50 to-orange-100 text-orange-700 text-sm font-semibold rounded-full border border-orange-200">Risk Assessment</span>
+                                        <span class="skill-tag px-4 py-2 bg-gradient-to-r from-orange-50 to-orange-100 text-orange-700 text-sm font-semibold rounded-full border border-orange-200">Financial Analysis</span>
+                                        <span class="skill-tag px-4 py-2 bg-gradient-to-r from-orange-50 to-orange-100 text-orange-700 text-sm font-semibold rounded-full border border-orange-200">Credit Scoring</span>
+                                        <span class="skill-tag px-4 py-2 bg-gradient-to-r from-orange-50 to-orange-100 text-orange-700 text-sm font-semibold rounded-full border border-orange-200">Client Relations</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-20 bg-gradient-to-br from-slate-100 to-blue-50 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Ready to Collaborate?</h2>
+            <p class="text-xl text-slate-600 mb-8 leading-relaxed">
+                I'm always interested in discussing new opportunities and challenging projects in data science and AI.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="contact.html" class="px-8 py-4 bg-gradient-to-r from-accent to-blue-600 text-white rounded-xl hover:from-blue-600 hover:to-accent transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl font-semibold">
+                    <i class="fas fa-envelope mr-2"></i>
+                    Get In Touch
+                </a>
+                <a href="projects.html" class="px-8 py-4 bg-white text-primary border-2 border-slate-300 rounded-xl hover:border-accent hover:text-accent transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-semibold">
+                    <i class="fas fa-briefcase mr-2"></i>
+                    View My Work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .timeline-item {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.6s ease;
+        }
+        
+        .timeline-item.animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .timeline-item:nth-child(1) { animation-delay: 0s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.4s; }
+        
+        @media (max-width: 767px) {
+            .timeline-item {
+                padding-left: 2rem;
+                border-left: 3px solid #e2e8f0;
+                margin-left: 1rem;
+            }
+            
+            .timeline-item::before {
+                content: '';
+                position: absolute;
+                left: -0.75rem;
+                top: 1rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+                border: 4px solid white;
+                box-shadow: 0 0 0 2px #e2e8f0;
+            }
+        }
+        
+        /* Scroll animations */
+        .timeline-item {
+            transition: all 0.6s ease;
+        }
+        
+        /* Enhanced hover states */
+        .experience-card:hover .achievement-item {
+            transform: translateX(8px);
+        }
+        
+        /* Mobile menu improvements */
+        @media (max-width: 767px) {
+            .glass-effect {
+                background: rgba(255, 255, 255, 0.98);
+            }
+        }
+    </style>
+
+    <!-- Footer injected from components/footer.html -->
+
+    <script src="../assets/js/include-components.js"></script>
+
+<script>
+    // Ensure all timeline items are visible and properly animated
+    document.addEventListener('DOMContentLoaded', function() {
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        timelineItems.forEach((item, index) => {
+            // Force visibility
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+            
+            // Add animation class with delay
+            setTimeout(() => {
+                item.classList.add('animate-fade-in-up');
+            }, index * 200);
+        });
+    });
+</script>
+
+<script>
+    // Mobile menu toggle for small screens
+    document.addEventListener('DOMContentLoaded', function(){
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if(btn && menu){
+            btn.addEventListener('click', ()=> menu.classList.toggle('hidden'));
+            // Close menu on link click
+            menu.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> menu.classList.add('hidden')));
+            // Ensure menu resets on resize
+            window.addEventListener('resize', ()=> { if(window.innerWidth >= 768){ menu.classList.add('hidden'); } });
+        }
+    });
+</script>
+
+</body>
+</html>

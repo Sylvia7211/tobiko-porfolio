@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leteipa Tobiko | Skills</title>
+    <meta name="description" content="Skills & Technical Expertise - Leteipa Tobiko, Actuary & Data Scientist based in Nairobi, Kenya.">
+    <script>
+        // Predefine Tailwind config and inject external assets only when online
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { primary: '#0f172a', accent: '#3b82f6', secondary: '#64748b' },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        }
+                    }
+                }
+            }
+        };
+        (function(){
+            if (navigator.onLine) {
+                var s = document.createElement('script'); s.src = 'https://cdn.tailwindcss.com'; document.head.appendChild(s);
+                var gf = document.createElement('link'); gf.rel = 'stylesheet'; gf.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap'; document.head.appendChild(gf);
+                var fa = document.createElement('link'); fa.rel = 'stylesheet'; fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'; document.head.appendChild(fa);
+            }
+        })();
+    </script>
+    <style>
+        body { font-feature-settings: 'kern' 1; }
+        h1, h2, h3 { letter-spacing: -0.5px; }
+        .prose p { margin-bottom: 0.5em; }
+        .prose ul { list-style-type: disc; padding-left: 1.2em; margin-bottom: 0.5em; }
+        .prose strong { font-weight: 600; color: #0f172a; }
+        
+        /* Enhanced skill card animations */
+        .skill-card { 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+            position: relative;
+            overflow: hidden;
+        }
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.6s;
+        }
+        .skill-card:hover::before {
+            left: 100%;
+        }
+        .skill-card:hover { 
+            transform: translateY(-8px) scale(1.02); 
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); 
+        }
+        
+        /* Navigation enhancements */
+        .nav-link { transition: all 0.3s ease; }
+        .nav-link.active { color: #3b82f6; font-weight: 700; border-bottom: 3px solid #3b82f6; padding-bottom: 2px; }
+        .nav-link:not(.active):hover { color: #3b82f6; }
+        
+        /* Progress bar animations */
+        .progress-bar {
+            background: linear-gradient(90deg, #e2e8f0 0%, #e2e8f0 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            border-radius: inherit;
+            animation: progressAnimation 2s ease-out forwards;
+        }
+        
+        /* Floating animation for hero section */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .floating { animation: float 6s ease-in-out infinite; }
+        
+        /* Gradient text effect */
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Tool icon hover effects */
+        .tool-icon {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .tool-icon:hover {
+            transform: translateY(-5px) rotate(5deg) scale(1.1);
+        }
+        
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Floating animation delays */
+        .floating-delay-2s { animation-delay: 2s; }
+        .floating-delay-4s { animation-delay: 4s; }
+        
+        /* Fade-in animation delays */
+        .fade-in-delay-0-2s { animation-delay: 0.2s; }
+        .fade-in-delay-0-4s { animation-delay: 0.4s; }
+        
+        /* Progress bar widths */
+        .progress-90 { width: 90%; }
+        .progress-85 { width: 85%; }
+        .progress-88 { width: 88%; }
+        .progress-92 { width: 92%; }
+        .progress-95 { width: 95%; }
+        .progress-87 { width: 87%; }
+        .progress-93 { width: 93%; }
+        
+        /* Hero background with image overlay - same as about page but different image */
+        .hero-bg {
+            background-image: linear-gradient(135deg, rgba(30, 58, 138, 0.9) 0%, rgba(88, 28, 135, 0.9) 50%, rgba(15, 23, 42, 0.9) 100%), url('../assets/images/projects/ml-project.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        /* Blob animations */
+        .blob {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            animation: blob 8s ease-in-out infinite;
+        }
+        @keyframes blob {
+            0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+        }
+        .blob-delay-2 {
+            animation-delay: 2s;
+        }
+    </style>
+    <script>
+        function highlightCurrentNav() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('a.nav-link');
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+        document.addEventListener('DOMContentLoaded', highlightCurrentNav);
+        window.addEventListener('load', highlightCurrentNav);
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased relative">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-primary">LT<span class="text-accent">.</span></a>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="nav-link text-slate-600 hover:text-accent font-medium transition">Home</a>
+                    <a href="about.html" class="nav-link text-slate-600 hover:text-accent font-medium transition">About</a>
+                    <a href="skills.html" class="nav-link text-slate-600 hover:text-accent font-medium transition">Skills</a>
+                    <a href="experience.html" class="nav-link text-slate-600 hover:text-accent font-medium transition">Experience</a>
+                    <a href="projects.html" class="nav-link text-slate-600 hover:text-accent font-medium transition">Projects</a>
+                    <a href="certifications.html" class="nav-link text-slate-600 hover:text-accent font-medium transition">Certifications</a>
+                    <a href="contact.html" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-slate-800 transition">Contact Me</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <a href="#about" class="block py-3 px-4 text-slate-600 hover:bg-slate-50">About</a>
+            <a href="#skills" class="block py-3 px-4 text-slate-600 hover:bg-slate-50">Skills</a>
+            <a href="#experience" class="block py-3 px-4 text-slate-600 hover:bg-slate-50">Experience</a>
+            <a href="#projects" class="block py-3 px-4 text-slate-600 hover:bg-slate-50">Projects</a>
+            <a href="#certifications" class="block py-3 px-4 text-slate-600 hover:bg-slate-50">Certifications</a>
+            <a href="#contact" class="block py-3 px-4 text-accent font-semibold">Contact Me</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Animated Background -->
+    <section class="relative h-96 md:h-[500px] flex items-center justify-center overflow-hidden hero-bg">
+        
+        <!-- Animated Blobs -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="blob absolute top-20 left-20 w-72 h-72 bg-purple-300 opacity-20 animate-float"></div>
+            <div class="blob absolute bottom-20 right-20 w-96 h-96 bg-blue-300 opacity-20 animate-float blob-delay-2"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <div class="animate-slide-up">
+                <div class="mb-8">
+                    <span class="inline-block px-4 py-2 text-sm font-semibold text-white bg-white/10 backdrop-blur-md rounded-full mb-6 border border-white/20">
+                        TECHNICAL EXCELLENCE
+                    </span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                    Skills & <span class="text-white">Expertise</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+                    Mastering the intersection of <span class="text-white font-semibold">data science</span>, <span class="text-white font-semibold">artificial intelligence</span>, and <span class="text-white font-semibold">actuarial analytics</span> to deliver innovative solutions.
+                </p>
+                
+                <!-- Stats overview -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+                        <div class="text-3xl md:text-4xl font-bold text-white mb-2">15+</div>
+                        <div class="text-white/80 text-sm">Years Experience</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+                        <div class="text-3xl md:text-4xl font-bold text-white mb-2">50+</div>
+                        <div class="text-white/80 text-sm">Projects Completed</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+                        <div class="text-3xl md:text-4xl font-bold text-white mb-2">10+</div>
+                        <div class="text-white/80 text-sm">Certifications</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+                        <div class="text-3xl md:text-4xl font-bold text-white mb-2">95%</div>
+                        <div class="text-white/80 text-sm">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-2xl"></i>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full mb-6">
+                    <span class="relative flex h-3 w-3 mr-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+                    </span>
+                    <span class="text-sm font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">MY EXPERTISE</span>
+                </div>
+                <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-slate-900 via-blue-800 to-purple-800 bg-clip-text text-transparent">Technical Skills</span>
+                </h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                    A comprehensive blend of technical proficiency and analytical expertise developed through rigorous academic training and extensive hands-on experience
+                </p>
+            </div>
+
+            <!-- Core Expertise Areas -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-24">
+                <!-- Programming & Data -->
+                <div class="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-slate-100">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-code text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-slate-900 mb-1">Programming & Data</h3>
+                                <div class="flex items-center text-sm text-blue-600 font-semibold">
+                                    <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                    Core Expertise
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 mb-8 leading-relaxed">Advanced proficiency in data manipulation, analysis, and programming languages essential for modern data science workflows.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="skill-progress">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm font-semibold text-slate-700 flex items-center">
+                                        <i class="fab fa-python text-blue-500 mr-2"></i>Python (Pandas, NumPy)
+                                    </span>
+                                    <span class="text-sm font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded-full">90%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full progress-90" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm font-semibold text-slate-700 flex items-center">
+                                        <i class="fab fa-r-project text-blue-700 mr-2"></i>R Language
+                                    </span>
+                                    <span class="text-sm font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded-full">85%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full progress-85" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm font-semibold text-slate-700 flex items-center">
+                                        <i class="fas fa-database text-blue-600 mr-2"></i>SQL
+                                    </span>
+                                    <span class="text-sm font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded-full">88%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full progress-88" data-width="88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI & Machine Learning -->
+                <div class="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-slate-100">
+                    <div class="absolute inset-0 bg-gradient-to-br from-purple-50 to-pink-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-brain text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-slate-900 mb-1">AI & Machine Learning</h3>
+                                <div class="flex items-center text-sm text-purple-600 font-semibold">
+                                    <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                    Advanced Specialization
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 mb-8 leading-relaxed">Cutting-edge expertise in artificial intelligence, computer vision, and advanced machine learning techniques.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="skill-progress">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm font-semibold text-slate-700 flex items-center">
+                                        <i class="fas fa-eye text-purple-500 mr-2"></i>Computer Vision
+                                    </span>
+                                    <span class="text-sm font-bold text-purple-600 bg-purple-50 px-2 py-1 rounded-full">92%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-purple-500 to-purple-400 rounded-full progress-92" data-width="92%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm font-semibold text-slate-700 flex items-center">
+                                        <i class="fas fa-robot text-purple-600 mr-2"></i>RLHF
+                                    </span>
+                                    <span class="text-sm font-bold text-purple-600 bg-purple-50 px-2 py-1 rounded-full">88%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-purple-500 to-purple-400 rounded-full progress-88" data-width="88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm font-semibold text-slate-700 flex items-center">
+                                        <i class="fas fa-tags text-purple-500 mr-2"></i>Data Annotation
+                                    </span>
+                                    <span class="text-sm font-bold text-purple-600 bg-purple-50 px-2 py-1 rounded-full">95%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-purple-500 to-purple-400 rounded-full progress-95" data-width="95%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actuarial & Finance -->
+                <div class="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-slate-100">
+                    <div class="absolute inset-0 bg-gradient-to-br from-orange-50 to-red-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-chart-line text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-slate-900 mb-1">Actuarial & Finance</h3>
+                                <div class="flex items-center text-sm text-orange-600 font-semibold">
+                                    <i class="fas fa-star text-yellow-500 mr-1"></i>
+                                    Domain Expertise
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 mb-8 leading-relaxed">Deep understanding of financial mathematics, risk modeling, and statistical analysis for actuarial applications.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="skill-progress">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm font-semibold text-slate-700 flex items-center">
+                                        <i class="fas fa-shield-alt text-orange-500 mr-2"></i>Risk Modeling
+                                    </span>
+                                    <span class="text-sm font-bold text-orange-600 bg-orange-50 px-2 py-1 rounded-full">90%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-orange-500 to-orange-400 rounded-full progress-90" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm font-semibold text-slate-700 flex items-center">
+                                        <i class="fas fa-clock text-orange-600 mr-2"></i>Time-Series Analysis
+                                    </span>
+                                    <span class="text-sm font-bold text-orange-600 bg-orange-50 px-2 py-1 rounded-full">87%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-orange-500 to-orange-400 rounded-full progress-87" data-width="87%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm font-semibold text-slate-700 flex items-center">
+                                        <i class="fas fa-calculator text-orange-500 mr-2"></i>Financial Math
+                                    </span>
+                                    <span class="text-sm font-bold text-orange-600 bg-orange-50 px-2 py-1 rounded-full">93%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-orange-500 to-orange-400 rounded-full progress-93" data-width="93%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technology Stack Section -->
+            <div class="bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden mb-24">
+                <!-- Section Header -->
+                <div class="bg-gradient-to-r from-slate-900 to-blue-900 p-8 text-center">
+                    <div class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-md rounded-full mb-6 border border-white/20">
+                        <span class="relative flex h-3 w-3 mr-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+                        </span>
+                        <span class="text-sm font-bold text-white">TECHNOLOGY STACK</span>
+                    </div>
+                    <h3 class="text-4xl font-bold text-white mb-4">Tools & Technologies</h3>
+                    <p class="text-blue-100 max-w-2xl mx-auto text-lg">Comprehensive expertise across modern technologies and industry-standard tools</p>
+                </div>
+                
+                <div class="p-8 md:p-12">
+                    <!-- Technology Categories -->
+                    <div class="space-y-16">
+                        <!-- Data Science & Analytics -->
+                        <div class="fade-in">
+                            <div class="flex items-center mb-8">
+                                <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
+                                    <i class="fas fa-chart-bar text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-2xl font-bold text-slate-900">Data Science & Analytics</h4>
+                                    <p class="text-slate-600">Core tools for data manipulation and analysis</p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                                <div class="tech-card group relative bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                                            <i class="fab fa-python text-3xl text-blue-500 group-hover:scale-110 transition-transform duration-300"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <span class="text-sm font-bold text-slate-900 block">Python</span>
+                                            <div class="flex items-center justify-center">
+                                                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-semibold">Expert</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tech-card group relative bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                                            <i class="fab fa-r-project text-3xl text-blue-700 group-hover:scale-110 transition-transform duration-300"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <span class="text-sm font-bold text-slate-900 block">R</span>
+                                            <div class="flex items-center justify-center">
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-semibold">Advanced</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tech-card group relative bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                                            <i class="fas fa-database text-3xl text-blue-600 group-hover:scale-110 transition-transform duration-300"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <span class="text-sm font-bold text-slate-900 block">SQL</span>
+                                            <div class="flex items-center justify-center">
+                                                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-semibold">Expert</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tech-card group relative bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                                            <i class="fas fa-chart-pie text-3xl text-yellow-500 group-hover:scale-110 transition-transform duration-300"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <span class="text-sm font-bold text-slate-900 block">Power BI</span>
+                                            <div class="flex items-center justify-center">
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-semibold">Advanced</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tech-card group relative bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                                            <i class="fas fa-file-excel text-3xl text-green-600 group-hover:scale-110 transition-transform duration-300"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <span class="text-sm font-bold text-slate-900 block">Excel</span>
+                                            <div class="flex items-center justify-center">
+                                                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-semibold">Expert</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tech-card group relative bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                                            <i class="fas fa-table text-3xl text-orange-500 group-hover:scale-110 transition-transform duration-300"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <span class="text-sm font-bold text-slate-900 block">Tableau</span>
+                                            <div class="flex items-center justify-center">
+                                                <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">Intermediate</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- AI & ML Frameworks -->
+                        <div class="fade-in fade-in-delay-0-2s">
+                            <div class="flex items-center mb-8">
+                                <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">
+                                    <i class="fas fa-brain text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-2xl font-bold text-slate-900">AI & ML Frameworks</h4>
+                                    <p class="text-slate-600">Advanced machine learning and AI technologies</p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                                <div class="tech-card group relative bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-100 hover:border-purple-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                                            <i class="fas fa-robot text-3xl text-purple-600 group-hover:scale-110 transition-transform duration-300"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <span class="text-sm font-bold text-slate-900 block">TensorFlow</span>
+                                            <div class="flex items-center justify-center">
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-semibold">Advanced</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tech-card group relative bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-100 hover:border-purple-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                                            <i class="fas fa-fire text-3xl text-orange-600 group-hover:scale-110 transition-transform duration-300"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <span class="text-sm font-bold text-slate-900 block">PyTorch</span>
+                                            <div class="flex items-center justify-center">
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-semibold">Advanced</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tech-card group relative bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-100 hover:border-purple-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                                            <i class="fas fa-cube text-3xl text-blue-500 group-hover:scale-110 transition-transform duration-300"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <span class="text-sm font-bold text-slate-900 block">Scikit-learn</span>
+                                            <div class="flex items-center justify-center">
+                                                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-semibold">Expert</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tech-card group relative bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-100 hover:border-purple-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                                            <i class="fas fa-eye text-3xl text-green-500 group-hover:scale-110 transition-transform duration-300"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <span class="text-sm font-bold text-slate-900 block">OpenCV</span>
+                                            <div class="flex items-center justify-center">
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-semibold">Advanced</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tech-card group relative bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-100 hover:border-purple-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                                            <i class="fas fa-language text-3xl text-indigo-500 group-hover:scale-110 transition-transform duration-300"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <span class="text-sm font-bold text-slate-900 block">NLTK</span>
+                                            <div class="flex items-center justify-center">
+                                                <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">Intermediate</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tech-card group relative bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-100 hover:border-purple-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                                            <i class="fas fa-chart-line text-3xl text-red-500 group-hover:scale-110 transition-transform duration-300"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <span class="text-sm font-bold text-slate-900 block">Hugging Face</span>
+                                            <div class="flex items-center justify-center">
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-semibold">Advanced</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    <!-- Development & Deployment -->
+                        <div class="fade-in fade-in-delay-0-4s">
+                            <div class="flex items-center mb-8">
+                                <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mr-4">
+                                    <i class="fas fa-code text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-2xl font-bold text-slate-900">Development & Deployment</h4>
+                                    <p class="text-slate-600">Modern development tools and deployment platforms</p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                                <div class="tech-card group relative bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-2xl border border-green-100 hover:border-green-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                                            <i class="fab fa-git-alt text-3xl text-orange-500 group-hover:scale-110 transition-transform duration-300"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <span class="text-sm font-bold text-slate-900 block">Git</span>
+                                            <div class="flex items-center justify-center">
+                                                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-semibold">Expert</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tech-card group relative bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-2xl border border-green-100 hover:border-green-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                                            <i class="fab fa-docker text-3xl text-blue-400 group-hover:scale-110 transition-transform duration-300"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <span class="text-sm font-bold text-slate-900 block">Docker</span>
+                                            <div class="flex items-center justify-center">
+                                                <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">Intermediate</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tech-card group relative bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-2xl border border-green-100 hover:border-green-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                                            <i class="fas fa-cloud text-3xl text-purple-500 group-hover:scale-110 transition-transform duration-300"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <span class="text-sm font-bold text-slate-900 block">AWS</span>
+                                            <div class="flex items-center justify-center">
+                                                <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">Intermediate</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tech-card group relative bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-2xl border border-green-100 hover:border-green-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                                            <i class="fas fa-server text-3xl text-gray-600 group-hover:scale-110 transition-transform duration-300"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <span class="text-sm font-bold text-slate-900 block">Linux</span>
+                                            <div class="flex items-center justify-center">
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-semibold">Advanced</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tech-card group relative bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-2xl border border-green-100 hover:border-green-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                                            <i class="fas fa-bolt text-3xl text-yellow-500 group-hover:scale-110 transition-transform duration-300"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <span class="text-sm font-bold text-slate-900 block">FastAPI</span>
+                                            <div class="flex items-center justify-center">
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-semibold">Advanced</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tech-card group relative bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-2xl border border-green-100 hover:border-green-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                    <div class="text-center">
+                                        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                                            <i class="fas fa-flask text-3xl text-cyan-500 group-hover:scale-110 transition-transform duration-300"></i>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <span class="text-sm font-bold text-slate-900 block">Flask</span>
+                                            <div class="flex items-center justify-center">
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full font-semibold">Advanced</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced JavaScript for animations -->
+    <script>
+        // Progress bar animation on scroll
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const progressObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBars = entry.target.querySelectorAll('.progress-bar > div');
+                    progressBars.forEach(bar => {
+                        const width = bar.getAttribute('data-width');
+                        bar.style.width = '0%';
+                        setTimeout(() => {
+                            bar.style.transition = 'width 2s cubic-bezier(0.4, 0, 0.2, 1)';
+                            bar.style.width = width;
+                        }, 200);
+                    });
+                }
+            });
+        }, observerOptions);
+        
+        // Fade-in animation observer
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // Initialize observers
+        document.addEventListener('DOMContentLoaded', () => {
+            // Observe skill cards for progress animations
+            document.querySelectorAll('.skill-card').forEach(card => {
+                progressObserver.observe(card);
+            });
+            
+            // Observe fade-in elements
+            document.querySelectorAll('.fade-in').forEach(el => {
+                fadeObserver.observe(el);
+            });
+        });
+        
+        // Enhanced mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('#mobile-menu-btn') && !e.target.closest('#mobile-menu')) {
+                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            }
+        });
+    </script>
+
+    <!-- Footer injected from components/footer.html -->
+
+    <script src="../assets/js/include-components.js"></script>
+
+</body>
+</html>
