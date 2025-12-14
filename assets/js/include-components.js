@@ -12,8 +12,8 @@
         return {path:null, text:''};
     }
 
-    const headerPaths = ['../components/header.html','components/header.html','/components/header.html'];
-    const footerPaths = ['../components/footer.html','components/footer.html','/components/footer.html'];
+    const headerPaths = ['./components/header.html','components/header.html','/components/header.html'];
+    const footerPaths = ['./components/footer.html','components/footer.html','/components/footer.html'];
 
     const headerResp = await tryFetch(headerPaths);
     const footerResp = await tryFetch(footerPaths);
