@@ -159,7 +159,7 @@
                                 </svg>
                             </span>
                         </a>
-                        <a href="../cv.pdf" download="Leteipa_Tobiko_CV.pdf" class="group px-4 sm:px-6 py-3 sm:py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-medium rounded-xl hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base">
+                        <a href="./cv.pdf" download="Leteipa_Tobiko_CV.pdf" class="group px-4 sm:px-6 py-3 sm:py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-medium rounded-xl hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base">
                             <span>Download CV</span>
                             <svg class="w-4 h-4 transition-transform group-hover:translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"></path>
@@ -228,7 +228,7 @@
                 <div class="flex justify-center lg:justify-start h-full">
                     <div class="relative w-full h-full lg:min-h-[500px] rounded-2xl overflow-hidden shadow-xl border-4 border-white">
                         <img 
-                            src="./assets/images/projects/bi-project.jpg"
+                            src="./assets/images/projects/analytics-dashboard.jpg"
                             alt="Data Analytics and Business Intelligence"
                             class="w-full h-full object-cover"
                             loading="lazy"
@@ -289,13 +289,14 @@
                 </div>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                    <div onclick="showServiceModal('analytics')" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 cursor-pointer">
+                    <div onclick="openModal('analytics-modal')" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 cursor-pointer">
                         <div class="h-48 relative overflow-hidden">
                             <img 
-                                src="./assets/images/projects/bi-project.jpg"
-                                alt="Advanced Analytics and Data Insights"
+                                src="./assets/images/university/analytics-building.jpg"
+                                alt="University Analytics Department"
                                 class="w-full h-full object-cover"
                                 loading="lazy"
+                                onerror="this.src='./assets/images/projects/analytics-dashboard.jpg'"
                             />
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
                             <div class="absolute bottom-4 left-4">
@@ -314,13 +315,14 @@
                         </div>
                     </div>
                     
-                    <div onclick="showServiceModal('ml')" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 cursor-pointer">
+                    <div onclick="openModal('ml-modal')" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 cursor-pointer">
                         <div class="h-48 relative overflow-hidden">
                             <img 
-                                src="./assets/images/projects/ml-project.jpg"
-                                alt="Machine Learning Solutions"
+                                src="./assets/images/university/computer-science-building.jpg"
+                                alt="University Computer Science Department"
                                 class="w-full h-full object-cover"
                                 loading="lazy"
+                                onerror="this.src='./assets/images/projects/ml-model.jpg'"
                             />
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
                             <div class="absolute bottom-4 left-4">
@@ -339,13 +341,14 @@
                         </div>
                     </div>
                     
-                    <div onclick="showServiceModal('risk')" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 cursor-pointer">
+                    <div onclick="openModal('risk-modal')" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 cursor-pointer">
                         <div class="h-48 relative overflow-hidden">
                             <img 
-                                src="./assets/images/projects/nlp-project.jpg"
-                                alt="Actuarial Risk Management"
+                                src="./assets/images/university/mathematics-building.jpg"
+                                alt="University Mathematics Department"
                                 class="w-full h-full object-cover"
                                 loading="lazy"
+                                onerror="this.src='./assets/images/projects/risk-dashboard.jpg'"
                             />
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
                             <div class="absolute bottom-4 left-4">
@@ -380,7 +383,7 @@
                 <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                     <div class="h-56 relative overflow-hidden">
                         <img 
-                            src="./assets/images/projects/bi-project.jpg" 
+                            src="./assets/images/projects/analytics-dashboard.jpg" 
                             alt="Stock Market Forecasting Dashboard" 
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
@@ -406,7 +409,7 @@
                 <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                     <div class="h-56 relative overflow-hidden">
                         <img 
-                            src="./assets/images/projects/ml-project.jpg" 
+                            src="./assets/images/projects/ml-model.jpg" 
                             alt="Customer Segmentation Analysis" 
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
@@ -432,7 +435,7 @@
                 <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                     <div class="h-56 relative overflow-hidden">
                         <img 
-                            src="./assets/images/projects/nlp-project.jpg" 
+                            src="./assets/images/projects/risk-dashboard.jpg" 
                             alt="AI Data Specialist Work" 
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
@@ -839,9 +842,101 @@ window.addEventListener('keydown', function(e) {
 </body>
 </html>
 
+<!-- Service Modals -->
+<div id="analytics-modal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-primary">Advanced Analytics & Insights</h3>
+                <button onclick="closeModal('analytics-modal')" class="text-slate-500 hover:text-slate-700">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div class="space-y-4">
+                <img src="./assets/images/projects/analytics-dashboard.jpg" alt="Analytics Dashboard" class="w-full h-48 object-cover rounded-lg">
+                <p class="text-slate-700">Our advanced analytics solutions help businesses transform raw data into actionable insights. We leverage cutting-edge statistical methods and data visualization techniques to uncover hidden patterns and trends in your data.</p>
+                <h4 class="font-semibold text-lg text-primary mt-4">Key Features:</h4>
+                <ul class="list-disc pl-5 space-y-2 text-slate-700">
+                    <li>Predictive analytics and forecasting</li>
+                    <li>Interactive dashboards and reports</li>
+                    <li>Customer behavior analysis</li>
+                    <li>Performance metrics and KPI tracking</li>
+                    <li>Data visualization and storytelling</li>
+                </ul>
+            </div>
+            <div class="mt-6 flex justify-end">
+                <button onclick="closeModal('analytics-modal')" class="px-6 py-2 bg-slate-200 text-slate-800 rounded-lg hover:bg-slate-300 transition-colors">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div id="ml-modal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-primary">Machine Learning Solutions</h3>
+                <button onclick="closeModal('ml-modal')" class="text-slate-500 hover:text-slate-700">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div class="space-y-4">
+                <img src="./assets/images/projects/ml-model.jpg" alt="Machine Learning Model" class="w-full h-48 object-cover rounded-lg">
+                <p class="text-slate-700">Our machine learning solutions help businesses automate processes, predict outcomes, and gain valuable insights from their data. We develop custom ML models tailored to your specific business needs.</p>
+                <h4 class="font-semibold text-lg text-primary mt-4">Our Expertise:</h4>
+                <ul class="list-disc pl-5 space-y-2 text-slate-700">
+                    <li>Predictive modeling and forecasting</li>
+                    <li>Natural language processing (NLP)</li>
+                    <li>Computer vision and image recognition</li>
+                    <li>Recommendation systems</li>
+                    <li>Anomaly detection</li>
+                </ul>
+            </div>
+            <div class="mt-6 flex justify-end">
+                <button onclick="closeModal('ml-modal')" class="px-6 py-2 bg-slate-200 text-slate-800 rounded-lg hover:bg-slate-300 transition-colors">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div id="risk-modal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-primary">Actuarial Risk Management</h3>
+                <button onclick="closeModal('risk-modal')" class="text-slate-500 hover:text-slate-700">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div class="space-y-4">
+                <img src="./assets/images/projects/risk-dashboard.jpg" alt="Risk Management Dashboard" class="w-full h-48 object-cover rounded-lg">
+                <p class="text-slate-700">Our actuarial risk management services help businesses identify, assess, and mitigate financial risks. We provide comprehensive risk assessment and financial modeling services to help you make informed decisions.</p>
+                <h4 class="font-semibold text-lg text-primary mt-4">Our Services:</h4>
+                <ul class="list-disc pl-5 space-y-2 text-slate-700">
+                    <li>Risk assessment and management</li>
+                    <li>Financial modeling and forecasting</li>
+                    <li>Insurance pricing and reserving</li>
+                    <li>Regulatory compliance</li>
+                    <li>Stress testing and scenario analysis</li>
+                </ul>
+            </div>
+            <div class="mt-6 flex justify-end">
+                <button onclick="closeModal('risk-modal')" class="px-6 py-2 bg-slate-200 text-slate-800 rounded-lg hover:bg-slate-300 transition-colors">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
+<script>
+    // Modal functions
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+    }
 
 
 
