@@ -178,16 +178,16 @@
                 <div class="relative flex justify-center lg:justify-end">
                     <div class="relative w-full h-full lg:min-h-[500px] rounded-2xl overflow-hidden shadow-xl border-4 border-white">
                         <!-- Main profile image with enhanced styling -->
-                        <div class="relative w-full h-full rounded-full overflow-hidden shadow-2xl border-4 border-slate-200 backdrop-blur-sm">
+                        <div class="relative w-64 h-64 mx-auto lg:mx-0 rounded-full overflow-hidden shadow-2xl border-4 border-white/20 backdrop-blur-sm transition-all duration-300 hover:border-accent/50">
                             <img 
                                 src="./assets/images/profile/profile.jpg.jpeg"
                                 onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Leteipa+Tobiko&background=4f46e5&color=fff&size=800'"
                                 alt="Leteipa Tobiko - Data Scientist & Actuary" 
-                                class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+                                class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700"
                                 loading="eager"
                             />
                             <!-- Gradient overlay -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/30 via-transparent to-transparent"></div>
                         </div>
                         
                         <!-- Floating decorative elements -->
@@ -293,12 +293,11 @@
                     <div onclick="openModal('analytics-modal')" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 cursor-pointer">
                         <div class="h-48 relative overflow-hidden">
                             <img 
-                                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                                src="./assets/images/projects/bi-project.jpg"
                                 onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Analytics&background=3b82f6&color=fff&size=800'"
                                 alt="Data Analytics and Business Intelligence"
-                                loading="lazy"
                                 class="w-full h-full object-cover"
-                                onerror="this.onerror=null; this.src='assets/images/projects/analytics-dashboard.jpg'"
+                                loading="lazy"
                             />
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
                             <div class="absolute bottom-4 left-4">
@@ -320,7 +319,7 @@
                     <div onclick="openModal('ml-modal')" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 cursor-pointer">
                         <div class="h-48 relative overflow-hidden">
                             <img 
-                                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                                src="./assets/images/projects/ml-model.jpg"
                                 onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=ML+Model&background=8b5cf6&color=fff&size=800'"
                                 alt="Machine Learning Model"
                                 class="w-full h-full object-cover"
@@ -346,12 +345,11 @@
                     <div onclick="openModal('risk-modal')" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-100 cursor-pointer">
                         <div class="h-48 relative overflow-hidden">
                             <img 
-                                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                                onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Risk+Management&background=10b981&color=fff&size=800'"
+                                src="./assets/images/projects/risk-dashboard.jpg"
+                                onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Risk+Dashboard&background=10b981&color=fff&size=800'"
                                 alt="Actuarial Risk Management"
                                 loading="lazy"
                                 class="w-full h-full object-cover"
-                                onerror="this.onerror=null; this.src='assets/images/projects/risk-dashboard.jpg'"
                             />
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
                             <div class="absolute bottom-4 left-4">
@@ -386,7 +384,7 @@
                 <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                     <div class="h-56 relative overflow-hidden">
                         <img 
-                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            src="https://via.placeholder.com/800x600/4f46e5/ffffff?text=Analytics+Dashboard" 
                             onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Analytics+Dashboard&background=4f46e5&color=fff&size=800'"
                             alt="Stock Market Forecasting Dashboard" 
                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -414,7 +412,7 @@
                 <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                     <div class="h-56 relative overflow-hidden">
                         <img 
-                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                            src="https://via.placeholder.com/800x600/4f46e5/ffffff?text=Analytics+Dashboard" 
                             onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Customer+Segmentation&background=8b5cf6&color=fff&size=800'"
                             alt="Customer Segmentation Analysis"
                             loading="lazy" 
@@ -442,7 +440,7 @@
                 <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                     <div class="h-56 relative overflow-hidden">
                             <img 
-                                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                                src="https://via.placeholder.com/800x600/4f46e5/ffffff?text=Analytics+Dashboard" 
                                 onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Risk+Dashboard&background=6366f1&color=fff&size=800'"
                                 alt="Risk Dashboard"
                                 loading="lazy" 
@@ -480,7 +478,7 @@
 
     <!-- Services Modal -->
     <div id="servicesModal" class="fixed inset-0 bg-black/50 z-[100] hidden items-center justify-center backdrop-blur-sm transition-opacity duration-300">
-        <div class="bg-white rounded-xl p-8 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto transform transition-all duration-300 scale-95 opacity-0 modal-content">
+        <div class="bg-white rounded-xl p-8 max-w-2xl w-full shadow-2xl mx-4">
             <div class="flex justify-between items-center mb-6">
                 <h3 class="text-2xl font-bold text-primary">Service Details</h3>
                 <button onclick="closeServicesModal()" class="text-slate-400 hover:text-slate-600 text-2xl transition-colors duration-200">
@@ -830,129 +828,26 @@ function openModal(id) {
         modal.classList.remove('hidden');
         modal.classList.add('flex');
         document.body.style.overflow = 'hidden';
+        // Trigger reflow to enable transition
+        void modal.offsetWidth;
+        // Add visible class with transition
+        const content = modal.querySelector('.modal-content');
+        if (content) {
+            content.classList.remove('opacity-0', 'scale-95');
+            content.classList.add('opacity-100', 'scale-100');
+        }
     }
 }
+
 function closeModal(id) {
     const modal = document.getElementById(id);
     if (modal) {
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-        document.body.style.overflow = 'auto';
-    }
-}
-// Optional: Close modal on ESC key
-window.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        document.querySelectorAll('.fixed.inset-0.z-\\[120\\]').forEach(function(modal) {
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-        });
-    }
-});
-</script>
-</body>
-</html>
-
-<!-- Service Modals -->
-<div id="analytics-modal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center p-4">
-    <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-        <div class="p-6">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-2xl font-bold text-primary">Advanced Analytics & Insights</h3>
-                <button onclick="closeModal('analytics-modal')" class="text-slate-500 hover:text-slate-700">
-                    <i class="fas fa-times text-2xl"></i>
-                </button>
-            </div>
-            <div class="space-y-4">
-                <img src="https://via.placeholder.com/800x600/4f46e5/ffffff?text=Analytics+Dashboard" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x600/4f46e5/ffffff?text=Analytics+Dashboard'" alt="Analytics Dashboard" class="w-full h-48 object-cover rounded-lg">
-                <p class="text-slate-700">Our advanced analytics solutions help businesses transform raw data into actionable insights. We leverage cutting-edge statistical methods and data visualization techniques to uncover hidden patterns and trends in your data.</p>
-                <h4 class="font-semibold text-lg text-primary mt-4">Key Features:</h4>
-                <ul class="list-disc pl-5 space-y-2 text-slate-700">
-                    <li>Predictive analytics and forecasting</li>
-                    <li>Interactive dashboards and reports</li>
-                    <li>Customer behavior analysis</li>
-                    <li>Performance metrics and KPI tracking</li>
-                    <li>Data visualization and storytelling</li>
-                </ul>
-            </div>
-            <div class="mt-6 flex justify-end">
-                <button onclick="closeModal('analytics-modal')" class="px-6 py-2 bg-slate-200 text-slate-800 rounded-lg hover:bg-slate-300 transition-colors">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="ml-modal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center p-4">
-    <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-        <div class="p-6">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-2xl font-bold text-primary">Machine Learning Solutions</h3>
-                <button onclick="closeModal('ml-modal')" class="text-slate-500 hover:text-slate-700">
-                    <i class="fas fa-times text-2xl"></i>
-                </button>
-            </div>
-            <div class="space-y-4">
-                <img src="./assets/images/projects/ml-model.jpg" alt="Machine Learning Model" class="w-full h-48 object-cover rounded-lg">
-                <p class="text-slate-700">Our machine learning solutions help businesses automate processes, predict outcomes, and gain valuable insights from their data. We develop custom ML models tailored to your specific business needs.</p>
-                <h4 class="font-semibold text-lg text-primary mt-4">Our Expertise:</h4>
-                <ul class="list-disc pl-5 space-y-2 text-slate-700">
-                    <li>Predictive modeling and forecasting</li>
-                    <li>Natural language processing (NLP)</li>
-                    <li>Computer vision and image recognition</li>
-                    <li>Recommendation systems</li>
-                    <li>Anomaly detection</li>
-                </ul>
-            </div>
-            <div class="mt-6 flex justify-end">
-                <button onclick="closeModal('ml-modal')" class="px-6 py-2 bg-slate-200 text-slate-800 rounded-lg hover:bg-slate-300 transition-colors">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="risk-modal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center p-4">
-    <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-        <div class="p-6">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-2xl font-bold text-primary">Actuarial Risk Management</h3>
-                <button onclick="closeModal('risk-modal')" class="text-slate-500 hover:text-slate-700">
-                    <i class="fas fa-times text-2xl"></i>
-                </button>
-            </div>
-            <div class="space-y-4">
-                <img src="./assets/images/projects/risk-dashboard.jpg" alt="Risk Management Dashboard" class="w-full h-48 object-cover rounded-lg">
-                <p class="text-slate-700">Our actuarial risk management services help businesses identify, assess, and mitigate financial risks. We provide comprehensive risk assessment and financial modeling services to help you make informed decisions.</p>
-                <h4 class="font-semibold text-lg text-primary mt-4">Our Services:</h4>
-                <ul class="list-disc pl-5 space-y-2 text-slate-700">
-                    <li>Risk assessment and management</li>
-                    <li>Financial modeling and forecasting</li>
-                    <li>Insurance pricing and reserving</li>
-                    <li>Regulatory compliance</li>
-                    <li>Stress testing and scenario analysis</li>
-                </ul>
-            </div>
-            <div class="mt-6 flex justify-end">
-                <button onclick="closeModal('risk-modal')" class="px-6 py-2 bg-slate-200 text-slate-800 rounded-lg hover:bg-slate-300 transition-colors">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    // Modal functions
-    function openModal(modalId) {
-        const modal = document.getElementById(modalId);
-        if (modal) {
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            document.body.style.overflow = 'hidden';
+        const content = modal.querySelector('.modal-content');
+        if (content) {
+            // Start transition out
+            content.classList.remove('opacity-100', 'scale-100');
+            content.classList.add('opacity-0', 'scale-95');
         }
-    }
-    function closeModal(id) {
-        const modal = document.getElementById(id);
-        // Start transition out
-        modal.querySelector('.modal-content').classList.remove('opacity-100', 'scale-100');
-        modal.querySelector('.modal-content').classList.add('opacity-0', 'scale-95');
         // Wait for transition to complete before hiding
         setTimeout(() => {
             modal.classList.add('hidden');
@@ -960,17 +855,7 @@ window.addEventListener('keydown', function(e) {
             document.body.style.overflow = 'auto';
         }, 200);
     }
-    function openModal(id) {
-        const modal = document.getElementById(id);
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        document.body.style.overflow = 'hidden';
-        // Trigger reflow to enable transition
-        void modal.offsetWidth;
-        // Add visible class with transition
-        modal.querySelector('.modal-content').classList.remove('opacity-0', 'scale-95');
-        modal.querySelector('.modal-content').classList.add('opacity-100', 'scale-100');
-    }
+}
 </script>
 
 
